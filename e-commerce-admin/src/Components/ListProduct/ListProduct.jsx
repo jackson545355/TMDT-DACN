@@ -48,7 +48,11 @@ const ListProduct = () => {
           return (
             <div>
               <div className="listproduct-format-main listproduct-format">
+<<<<<<< HEAD
                 <img className="listproduct-product-icon" src={e.images[0]} alt="" />
+=======
+                <img className="listproduct-product-icon" src={e.image} alt="" />
+>>>>>>> f646d727d13e795eed3c1210bdbaabb6b895da6c
                 <p cartitems-product-title>{e.name}</p>
                 <p>${e.old_price}</p>
                 <p>${e.new_price}</p>

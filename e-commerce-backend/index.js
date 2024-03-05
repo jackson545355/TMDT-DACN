@@ -26,6 +26,7 @@ app.use('/api/User', UserAPI)
 const storage = multer.diskStorage({
     destination: './upload/images',
     filename: (req, file, cb) => {
+<<<<<<< HEAD
       // console.log(file);
         return cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
     }
@@ -44,6 +45,19 @@ const storage = multer.diskStorage({
     }
       res.json(uploadimages)
   })
+=======
+      console.log(file);
+        return cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
+    }
+})
+const upload = multer({storage: storage})
+app.post("/upload", upload.single('product'), (req, res) => {
+    res.json({
+        success: 1,
+        image_url: `http://localhost:4000/images/${req.file.filename}`
+    })
+})
+>>>>>>> f646d727d13e795eed3c1210bdbaabb6b895da6c
 app.use('/images', express.static('upload/images'));
 //-------------UPLOAD FILE PICTURE-------------
 
