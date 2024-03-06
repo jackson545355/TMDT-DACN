@@ -26,7 +26,6 @@ app.use('/api/User', UserAPI)
 const storage = multer.diskStorage({
     destination: './upload/images',
     filename: (req, file, cb) => {
-<<<<<<< HEAD
       // console.log(file);
         return cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
     }
@@ -45,19 +44,6 @@ const storage = multer.diskStorage({
     }
       res.json(uploadimages)
   })
-=======
-      console.log(file);
-        return cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
-    }
-})
-const upload = multer({storage: storage})
-app.post("/upload", upload.single('product'), (req, res) => {
-    res.json({
-        success: 1,
-        image_url: `http://localhost:4000/images/${req.file.filename}`
-    })
-})
->>>>>>> f646d727d13e795eed3c1210bdbaabb6b895da6c
 app.use('/images', express.static('upload/images'));
 //-------------UPLOAD FILE PICTURE-------------
 
@@ -110,114 +96,6 @@ app.post('/getcart', fetchuser, async (req, res) => {
 app.get("/", (req, res) => {
   res.send("Root");
 });
-
-//Create an endpoint at ip/login for login the user and giving auth-token
-// app.post('/login', async (req, res) => {
-//   console.log("Login");
-//     let success = false;
-//     let user = await Users.findOne({ email: req.body.email });
-//     if (user) {
-//         const passCompare = req.body.password === user.password;
-//         if (passCompare) {
-//             const data = {
-//                 user: {
-//                     id: user.id
-//                 }
-//             }
-// 			success = true;
-//       console.log(user.id);
-// 			const token = jwt.sign(data, 'secret_ecom');
-// 			res.json({ success, token });
-//         }
-//         else {
-//             return res.status(400).json({success: success, errors: "please try with correct email/password"})
-//         }
-//     }
-//     else {
-//         return res.status(400).json({success: success, errors: "please try with correct email/password"})
-//     }
-// })
-
-//Create an endpoint at ip/auth for regestring the user in data base & sending token
-// app.post('/signup', async (req, res) => {
-//   console.log("Sign Up");
-//         let success = false;
-//         let check = await Users.findOne({ email: req.body.email });
-//         if (check) {
-//             return res.status(400).json({ success: success, errors: "existing user found with this email" });
-//         }
-//         let cart = {};
-//           for (let i = 0; i < 300; i++) {
-//           cart[i] = 0;
-//         }
-//         const user = new Users({
-//             name: req.body.username,
-//             email: req.body.email,
-//             password: req.body.password,
-//             cartData: cart,
-//         });
-//         await user.save();
-//         const data = {
-//             user: {
-//                 id: user.id
-//             }
-//         }
-        
-//         const token = jwt.sign(data, 'secret_ecom');
-//         success = true; 
-//         res.json({ success, token })
-//     })
-
-// app.get("/allproducts", async (req, res) => {
-// 	let products = await Product.find({});
-//   console.log("All Products");
-//     res.send(products);
-// });
-
-// app.get("/newcollections", async (req, res) => {
-// 	let products = await Product.find({});
-//   let arr = products.slice(1).slice(-8);
-//   console.log("New Collections");
-//   res.send(arr);
-// });
-
-// app.get("/popularinwomen", async (req, res) => {
-// 	let products = await Product.find({});
-//   let arr = products.splice(0,  4);
-//   console.log("Popular In Women");
-//   res.send(arr);
-// });
-
-
-// app.post("/addproduct", async (req, res) => {
-//   let products = await Product.find({});
-//   let id;
-//   if (products.length>0) {
-//     let last_product_array = products.slice(-1);
-//     let last_product = last_product_array[0];
-//     id = last_product.id+1;
-//   }
-//   else
-//   { id = 1; }
-//   const product = new Product({
-//     id: id,
-//     name: req.body.name,
-//     image: req.body.image,
-//     category: req.body.category,
-//     new_price: req.body.new_price,
-//     old_price: req.body.old_price,
-//   });
-//   console.log(product);
-//   await product.save();
-//   console.log("Saved");
-//   res.json({success:true,name:req.body.name})
-// });
-
-// app.post("/removeproduct", async (req, res) => {
-//   const product = await Product.findOneAndDelete({ id: req.body.id });
-//   console.log("Removed");
-//   res.json({success:true,name:req.body.name})
-// });
 
 app.listen(port, (error) => {
   if (!error) console.log("Server Running on port " + port);
