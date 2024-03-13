@@ -19,6 +19,10 @@
 .productdisplay-main-img{
     height: 500px;
 }
+.productdisplay-img-list img:hover {
+    opacity: 0.6; /* Ví dụ, làm mờ hình ảnh khi hover */
+    cursor: pointer; /* Thêm con trỏ chuột để biểu thị có thể tương tác */
+  }
 .productdisplay-right{
     display: flex;
     flex-direction: column;

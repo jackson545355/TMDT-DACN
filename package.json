@@ -6,7 +6,7 @@
         "e-commerce-frontend"
     ],
     "dependencies": {
-        "yarn": "^1.22.21"
+        "yarn": "^1.22.22"
     },
     "scripts": {
         "start": "concurrently --kill-others-on-fail \"yarn workspace e-commerce-admin start\" \"yarn workspace e-commerce-backend start\" \"yarn workspace e-commerce-frontend start\""
