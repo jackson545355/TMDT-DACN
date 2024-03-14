@@ -4196,7 +4196,7 @@ duplexer@^0.1.2:
   resolved "https://registry.npmjs.org/duplexer/-/duplexer-0.1.2.tgz"
   integrity sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==
 
-"e-commerce-admin@file:D:\\DACN\\TMDT NEW\\TMDT-DACN\\e-commerce-admin":
+"e-commerce-admin@file:D:\\Study\\HCMUT\\Hoc ky 8\\DACN\\TMDT-DACN\\e-commerce-admin":
   version "0.1.0"
   resolved "file:e-commerce-admin"
   dependencies:
@@ -4209,7 +4209,7 @@ duplexer@^0.1.2:
     react-scripts "^5.0.1"
     web-vitals "^2.1.4"
 
-"e-commerce-backend@file:D:\\DACN\\TMDT NEW\\TMDT-DACN\\e-commerce-backend":
+"e-commerce-backend@file:D:\\Study\\HCMUT\\Hoc ky 8\\DACN\\TMDT-DACN\\e-commerce-backend":
   version "1.0.0"
   resolved "file:e-commerce-backend"
   dependencies:
@@ -4223,7 +4223,7 @@ duplexer@^0.1.2:
     multer "^1.4.5-lts.1"
     nodemon "^3.1.0"
 
-"e-commerce-frontend@file:D:\\DACN\\TMDT NEW\\TMDT-DACN\\e-commerce-frontend":
+"e-commerce-frontend@file:D:\\Study\\HCMUT\\Hoc ky 8\\DACN\\TMDT-DACN\\e-commerce-frontend":
   version "0.1.0"
   resolved "file:e-commerce-frontend"
   dependencies:
