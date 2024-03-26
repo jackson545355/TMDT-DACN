@@ -6,7 +6,7 @@ import RelatedProducts from '../Components/RelatedProducts/RelatedProducts'
 import { useParams } from 'react-router-dom'
 import { ShopContext } from '../Context/ShopContext'
 
-const Product = () => {
+const WebProduct = () => {
   const {products} = useContext(ShopContext);
   const {productId} = useParams();
   const product = products.find((e)=>e.id === Number(productId));
@@ -21,4 +21,4 @@ const Product = () => {
   )
 }
 
-export default Product
+export default WebProduct
